@@ -4,41 +4,58 @@
 // Dos atributos más: para la longitud de la base (base) y de la altura (height)
 // Un método para calcular el perímetro (perimeter) (multiplicar la longitud del lado base por el número de lados)
 // Un método para calcular el área (area) (multiplicar base por altura)
+
 // La subclase Square tendrá:
 // Un atributo lado (side) igual a la base
+
 // Un constructor que recibirá exclusivamente la longitud del lado
+
 // La subclase Triangle tendrá:
 // Un constructor que recibirá base y altura
+
 // Un método area() que sobrescibirá al de la clase base. Devolverá la mitad de lo que devuelva llamar al área de la clase base (super.area() / 2)
+
 // Crearemos dos instancias: un cuadrado de 4 de lado y un triángulo de 4 de base y 3 de altura. Llamaremos a los dos métodos en todas las instancias.
 
-class Square {
-  constructor(side) {
-    this.side = side;
+class Polygon {
+  constructor(numberOfSides, base, height) {
+    this.numberOfSides = numberOfSides;
+    this.base = base;
+    this.height = height;
   }
   perimeter() {
-    return this.side * 4;
+    return this.base * this.numberOfSides;
   }
   area() {
-    return this.side * this.side;
+    return this.base * this.height;
   }
 }
-const instance = new Square(1);
-const instance3 = new Square(3);
-const instance7 = new Square(7);
 
-instance.perimeter();
-instance3.perimeter();
-instance7.perimeter();
-instance.area();
-instance3.area();
-instance7.area();
+class Square extends Polygon {
+  constructor(height) {
+    super(height);
+    this.side = base;
+  }
+}
 
-console.log(instance.perimeter());
-console.log(instance.area());
+class Triangle extends Polygon {
+  constructor(base, height) {
+    super(base, height);
+  }
+  area() {
+    return super.area() / 2;
+  }
+}
 
-console.log(instance3.perimeter());
-console.log(instance3.area());
+const instanceSquare = new Polygon(4, 4, 4);
+const instanceTriangle = new Polygon(3, 4, 3);
 
-console.log(instance7.perimeter());
-console.log(instance7.area());
+instanceSquare.perimeter();
+instanceTriangle.perimeter();
+instanceSquare.area();
+instanceTriangle.area();
+
+console.log(instanceSquare.perimeter()); // 16
+console.log(instanceTriangle.perimeter()); // 12
+console.log(instanceSquare.area()); // 16
+console.log(instanceTriangle.area()); // 12
