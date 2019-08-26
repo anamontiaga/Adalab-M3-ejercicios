@@ -39,9 +39,6 @@ class Square extends Polygon {
 }
 
 class Triangle extends Polygon {
-  constructor(base, height) {
-    super(base, height);
-  }
   area() {
     return super.area() / 2;
   }
@@ -49,13 +46,18 @@ class Triangle extends Polygon {
 
 const instanceSquare = new Polygon(4, 4, 4);
 const instanceTriangle = new Polygon(3, 4, 3);
+const instanceTriangleTriangle = new Triangle(3, 4, 3);
 
 instanceSquare.perimeter();
 instanceTriangle.perimeter();
 instanceSquare.area();
 instanceTriangle.area();
+instanceTriangleTriangle.area();
 
 console.log(instanceSquare.perimeter()); // 16
 console.log(instanceTriangle.perimeter()); // 12
 console.log(instanceSquare.area()); // 16
 console.log(instanceTriangle.area()); // 12
+
+// ¿Y si quiero ejecutar la function area() de la subclase Triangle?
+console.log(instanceTriangleTriangle.area());
