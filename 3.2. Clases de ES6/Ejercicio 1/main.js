@@ -6,11 +6,11 @@
 // Calcularemos y mostraremos el perímetro y el área de un cuadrado de 9 de lado.
 
 class Square {
-  perimeter(x) {
-    return x * 4;
+  perimeter(side) {
+    return side * 4;
   }
-  area(x) {
-    return x * x;
+  area(side) {
+    return side * side;
   }
 }
 const instance = new Square();
