@@ -21,12 +21,12 @@ const instance = new Square(1);
 const instance3 = new Square(3);
 const instance7 = new Square(7);
 
-instance.perimeter();
-instance3.perimeter();
-instance7.perimeter();
-instance.area();
-instance3.area();
-instance7.area();
+// instance.perimeter();
+// instance3.perimeter();
+// instance7.perimeter();
+// instance.area();
+// instance3.area();
+// instance7.area();
 
 console.log(instance.perimeter());
 console.log(instance.area());
