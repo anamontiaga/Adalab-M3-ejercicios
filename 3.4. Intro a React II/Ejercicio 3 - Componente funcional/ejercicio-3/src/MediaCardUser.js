@@ -1,3 +1,4 @@
+// Convierte el componente MediaCard del ejercicio anterior en un componente funcional.
 import React from "react";
 
 // class MediaCardUser extends React.Component {
