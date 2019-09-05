@@ -1,0 +1,57 @@
+.App {
+  width: 400px;
+  height: 200px;
+  margin-top: 50px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 20%;
+  border: 1px solid black;
+  padding: 15px;
+  &-header {
+    display: flex;
+    flex-direction: row;
+    &-title {
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      font-size: 12px;
+    }
+    &-maintitle {
+      font-size: 12px;
+      margin: 0;
+    }
+    &-subtitle {
+      font-size: 9px;
+      margin: 0;
+    }
+  }
+  &-main-paragraph {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 9px;
+    text-align: justify;
+  }
+  &-footer {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 9px;
+    justify-content: space-between;
+    &-paragraph {
+      color: rgb(113, 117, 117);
+    }
+  }
+  &-foto {
+    width: 70px;
+    height: 70px;
+    border-radius: 150px;
+  }
+}
+.fas {
+  color: red;
+  font-size: 16px;
+}
