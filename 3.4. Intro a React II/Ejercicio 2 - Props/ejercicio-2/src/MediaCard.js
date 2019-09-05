@@ -6,16 +6,14 @@
 // el número de likes
 // si el corazón está o no relleno
 import React from "react";
-import ReactDOM from "react-dom";
 import foto from "./foto.jpg";
 import "./App.css";
+import MediaCardUser from "./MediaCardUser";
 
 const Header = (
   <header className="App-header">
-    <img src={foto} className="App-foto" alt="foto" />
     <div className="App-header-title">
-      {componentToRender}
-      <h3 className="App-header-subtitle">Lunes 26 de junio de 2017</h3>
+      <MediaCardUser src={foto} name="Ana Montiaga" date="Jueves 05 de septiembre de 2019" />
     </div>
   </header>
 );
@@ -45,14 +43,5 @@ function MediaCard() {
     </div>
   );
 }
-
-class Personalize extends React.Component {
-  render() {
-    return <h1 className="App-header-maintitle">{this.props.name}</h1>;
-  }
-}
-const componentToRender = <Personalize name="Ana Montiaga" />;
-
-ReactDOM.render(componentToRender, document.getElementById("root"));
 
 export default MediaCard;

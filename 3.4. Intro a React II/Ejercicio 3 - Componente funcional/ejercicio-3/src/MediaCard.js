@@ -1,13 +1,14 @@
+// Convierte el componente MediaCard del ejercicio anterior en un componente funcional.
+
 import React from "react";
 import foto from "./foto.jpg";
 import "./App.css";
+import MediaCardUser from "./MediaCardUser";
 
 const Header = (
   <header className="App-header">
-    <img src={foto} className="App-foto" alt="foto" />
     <div className="App-header-title">
-      <h1 className="App-header-maintitle">Alex Guerrero</h1>
-      <h3 className="App-header-subtitle">Lunes 26 de junio de 2017</h3>
+      <MediaCardUser src={foto} name="Ana Montiaga" date="Jueves 05 de septiembre de 2019" />
     </div>
   </header>
 );
