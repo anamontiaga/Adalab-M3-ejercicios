@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "./static/css/main.ea9b50d7.chunk.css",
+    "main.js": "./static/js/main.d0d44fb8.chunk.js",
+    "main.js.map": "./static/js/main.d0d44fb8.chunk.js.map",
+    "runtime~main.js": "./static/js/runtime~main.d0d522f6.js",
+    "runtime~main.js.map": "./static/js/runtime~main.d0d522f6.js.map",
+    "static/js/2.d7ac1ac1.chunk.js": "./static/js/2.d7ac1ac1.chunk.js",
+    "static/js/2.d7ac1ac1.chunk.js.map": "./static/js/2.d7ac1ac1.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.c0ba831e508e53f0db72e6717408d149.js": "./precache-manifest.c0ba831e508e53f0db72e6717408d149.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.ea9b50d7.chunk.css.map": "./static/css/main.ea9b50d7.chunk.css.map",
+    "static/media/foto.jpg": "./static/media/foto.bcf5dd43.jpg",
+    "static/media/fotobea.jpg": "./static/media/fotobea.1d7e11b1.jpg",
+    "static/media/fotolaura.jpg": "./static/media/fotolaura.313c8c24.jpg"
+  }
+}
