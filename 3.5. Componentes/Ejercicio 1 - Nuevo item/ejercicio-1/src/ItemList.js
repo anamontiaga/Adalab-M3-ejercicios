@@ -1,8 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Item from "./Item.js";
 
-const arrayOfItems = [
+const items = [
   {
     name: "Cereales con chocolate",
     description: "Cereales rellenos de chocolate",
@@ -28,21 +27,13 @@ const arrayOfItems = [
 
 class ItemList extends React.Component {
   render() {
-    return (
-      <ul className="item-list">
-        <li>
-          <Item name="Cereales con chocolate" description="Cereales rellenos de chocolate" quantity={2} category="Cereales" price={5} />
-        </li>
-        <li>
-          <Item name="Hamburguesa con queso" description="Hamburguesa rica y saludable" quantity={1} category="Fast-food" price={15} />
-        </li>
-        <li>
-          <Item name="Agua mineral" description="Agua de un charco del Himalaya" quantity={2} category="Bebida" price={5} />
-        </li>
-      </ul>
-    );
+    const ArrayItems = items
+      .filter(item => item.price < 10)
+      .map((item, index) => {
+        return <Item key={index} name={item.name} description={item.description} quantity={item.quantity} category={item.category} price={item.price} />;
+      });
+    return <ul className="item-list">{ArrayItems}</ul>;
   }
 }
 
-ReactDOM.render(<ItemList items={arrayOfItems} />, document.getElementById("react-root"));
 export default ItemList;

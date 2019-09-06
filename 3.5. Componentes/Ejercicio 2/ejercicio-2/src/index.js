@@ -1,12 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+// Desarrolla un componente HalfPage que todo su contenido lo ponga en la mitad izquierda de la pantalla (mitad de ancho y todo el alto). Usa children para introducir todo el contenido entre la apertura y cierre de HalfPage en su interior. Crea 2 componentes HalfPage con algo de contenido HTML (en JSX) para ver cómo se posiciona en una mitad y la otra.
