@@ -18,7 +18,6 @@ const items = [
   },
   {
     name: "Agua mineral",
-    description: "Agua de un charco del Himalaya",
     quantity: 2,
     category: "Bebida",
     price: 5
