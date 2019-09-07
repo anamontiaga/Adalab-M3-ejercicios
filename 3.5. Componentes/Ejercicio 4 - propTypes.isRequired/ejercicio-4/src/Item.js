@@ -20,7 +20,9 @@ Item.defaultProps = {
   description: "No hay descripción"
 };
 
-// Item.propType.isRequired = {
-//   name: PropTypes.string
-// };
-// export default Item;
+Item.propTypes = {
+  name: PropTypes.isRequired,
+  price: PropTypes.number.isRequired
+};
+
+export default Item;
