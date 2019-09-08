@@ -2,7 +2,7 @@
 
 import React from "react";
 import foto from "./foto.jpg";
-import "./App.css";
+import "./MediaCard.css";
 import MediaCardUser from "./MediaCardUser";
 
 const Header = (
