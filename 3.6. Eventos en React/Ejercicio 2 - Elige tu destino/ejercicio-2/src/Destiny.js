@@ -19,3 +19,5 @@ class Destiny extends React.Component {
 }
 
 export default Destiny;
+
+// había que hacerlo sin handler? cómo lo hago sin handler? Qué es lo correcto?
