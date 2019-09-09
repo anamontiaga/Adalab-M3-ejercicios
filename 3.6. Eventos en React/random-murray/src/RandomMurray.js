@@ -8,6 +8,7 @@ const MAX_SIZE = 400;
 class RandomMurray extends React.Component {
   constructor(props) {
     super(props);
+    debugger;
     // Este enlace es necesario para hacer que `this` funcione en el callback
     this.handleClick = this.handleClick.bind(this);
   }

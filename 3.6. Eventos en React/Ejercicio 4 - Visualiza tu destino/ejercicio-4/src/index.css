@@ -3,3 +3,8 @@
   justify-content: center;
   padding-top: 100px;
 }
+
+.cityImage {
+  height: 200px;
+  width: 200px;
+}

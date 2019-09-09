@@ -1,24 +1,34 @@
 import React from "react";
 import "./Destiny.css";
+import CityImage from "./CityImage.js";
+
+let bestCity;
 
 class Destiny extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleWrite = this.handleWrite.bind(this);
+  }
   handleWrite(event) {
-    alert(`Tu destino es viajar a ${event.target.value}`);
+    bestCity = event.target.value;
+    this.forceUpdate(); // repintar (re-renderizar)
   }
   render() {
     return (
-      <select onChange={this.handleWrite}>
-        <option>Buenos Aires</option>
-        <option>Sydney</option>
-        <option>Praga</option>
-        <option>Boston</option>
-        <option>Tokio</option>
-      </select>
-      <div className="imageSize"><CityImage src={foto} name=""  /></div>
+      <div>
+        <select onChange={this.handleWrite}>
+          <option>Elige una ciudad</option>
+          <option>Buenos Aires</option>
+          <option>Sydney</option>
+          <option>Praga</option>
+          <option>Boston</option>
+          <option>Tokio</option>
+        </select>
+
+        <CityImage city={bestCity === undefined ? "" : bestCity} />
+      </div>
     );
   }
 }
 
 export default Destiny;
-
-// había que hacerlo sin handler? cómo lo hago sin handler? Qué es lo correcto?

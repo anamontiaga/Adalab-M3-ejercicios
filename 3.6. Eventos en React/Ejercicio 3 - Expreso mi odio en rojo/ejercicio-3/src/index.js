@@ -4,7 +4,7 @@ import "./index.css";
 import OnionHater from "./OnionHater";
 import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<OnionHater />, document.getElementById("root"));
+ReactDOM.render(<OnionHater isHating />, document.getElementById("root"));
 
 serviceWorker.unregister();
 
