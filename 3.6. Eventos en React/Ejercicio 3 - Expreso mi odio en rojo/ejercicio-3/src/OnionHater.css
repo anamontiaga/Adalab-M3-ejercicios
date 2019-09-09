@@ -1,6 +1,14 @@
 .Screen {
   display: flex;
   justify-content: center;
+
+  height: 100vh;
+  width: 100vh;
+}
+textarea {
   margin-top: 20%;
-  background-size: cover;
+  margin-bottom: 20%;
+}
+.red {
+  background-color: red;
 }
