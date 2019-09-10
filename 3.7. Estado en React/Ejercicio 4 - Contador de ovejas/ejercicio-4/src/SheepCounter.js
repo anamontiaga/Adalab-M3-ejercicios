@@ -13,7 +13,7 @@ class SheepCounter extends React.Component {
   upDateCounter() {
     this.setState((prevState, props) => {
       let nextValue;
-      nextValue = parseInt(this.state.value + 1);
+      nextValue = this.state.counter + 1;
       return {
         counter: nextValue
       };
