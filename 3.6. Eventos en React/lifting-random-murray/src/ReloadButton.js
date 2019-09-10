@@ -2,12 +2,10 @@ import React from "react";
 
 class ReloadButton extends React.Component {
   render() {
-    const actionToPerform = this.props.actionToPerform;
-    const label = this.props.label || "More";
-
+    // const actionToPerform = this.props.actionToPerform;
     return (
       // Registramos el escuchador que recibimos por props. ¡Lifting hecho!
-      <button onClick={actionToPerform}>{label}</button>
+      <button onClick={this.props.actionToPerform}>{this.props.label}</button>
     );
   }
 }

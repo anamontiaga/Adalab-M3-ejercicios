@@ -15,8 +15,6 @@ class MurrayList extends React.Component {
   }
 
   render() {
-    const handleClick = this.handleClick;
-
     return (
       <section className="section-murrays">
         <h1>
@@ -33,8 +31,7 @@ class MurrayList extends React.Component {
             <RandomMurray />
           </li>
         </ul>
-        {/* pasamos handleClick al hijo como prop */}
-        <ReloadButton actionToPerform={handleClick} label="More murrays" />
+        <ReloadButton actionToPerform={this.handleClick} label="More murrays" />
       </section>
     );
   }
