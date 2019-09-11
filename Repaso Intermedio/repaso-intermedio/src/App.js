@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-// import PropTypes from "prop-types";
+import Card from "./Card.js";
 
 const data = {
   version: "v0.0.0",
@@ -44,16 +44,7 @@ class App extends React.Component {
         <ul className="palettes">
           {data.palettes.map((item, index) => (
             <li className="palette" key={`p${index}`} id={`p${index}`}>
-              <div className="card">
-                <h2 className="card__name">{item.name}</h2>
-                <ul className="card__colors">
-                  {item.colors.map((color, colorIndex) => (
-                    <li className="card__color" key={`c${colorIndex}`} id={`p${index}c${colorIndex}`} style={{ backgroundColor: `#${color}` }} onClick={this.handleColorClick}>
-                      {color}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <Card name={item.name} colors={item.colors} colorAction={this.handleColorClick} />
             </li>
           ))}
         </ul>
