@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+
+body {
+  background: #fffdfa;
+  color: #332100;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.palettes {
+  width: 500px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+.palette {
+  padding: 20px 20px 30px;
+}
+
+.card__name {
+  margin: 0 0 10px;
+  font-style: italic;
+  font-weight: 500;
+}
+.card__colors {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+}
+.card__color {
+  width: 100px;
+  height: 0;
+  padding-top: 100px;
+  overflow: hidden;
+}
