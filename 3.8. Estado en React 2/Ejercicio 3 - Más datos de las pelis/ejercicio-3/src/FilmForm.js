@@ -7,7 +7,9 @@ class FilmForm extends React.Component {
     this.state = {
       name: "",
       description: "",
-      language: ""
+      language: "",
+      age: "A",
+      genre: ""
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -31,11 +33,51 @@ class FilmForm extends React.Component {
             <option value="ingles">Inglés</option>
             <option value="portugues">Portugués</option>
           </select>
+
+          <div className="age-radio">
+            {" "}
+            EDAD:
+            <label htmlFor="A">
+              A
+              <input id="form--age" type="radio" name="age" value="A" onChange={this.handleChange} checked={this.state.age === "A" ? true : false} />
+            </label>
+            <label htmlFor="7">
+              7
+              <input id="form--age" type="radio" name="age" value="7" onChange={this.handleChange} checked={this.state.age === "7" ? true : false} />
+            </label>
+            <label htmlFor="12">
+              12
+              <input id="form--age" type="radio" name="age" value="12" onChange={this.handleChange} checked={this.state.age === "12" ? true : false} />
+            </label>
+            <label htmlFor="16">
+              16
+              <input id="form--age" type="radio" name="age" value="16" onChange={this.handleChange} checked={this.state.age === "16" ? true : false} />
+            </label>
+            <label htmlFor="18">
+              18
+              <input id="form--age" type="radio" name="age" value="18" onChange={this.handleChange} checked={this.state.age === "18" ? true : false} />
+            </label>
+            <div className="age-radio">
+              {" "}
+              GÉNERO:
+              <label htmlFor="comedia">Comedia</label>
+              <input type="checkbox" id="comedia" value="comedia" name="genre" onChange={this.handleChange} checked={this.state.genre === "comedia" ? true : false} />
+              <label htmlFor="drama">Drama</label>
+              <input type="checkbox" id="drama" value="drama" name="genre" onChange={this.handleChange} checked={this.state.genre === "drama" ? true : false} />
+              <label htmlFor="fantasia">Fantasía</label>
+              <input type="checkbox" id="fantasia" value="fantasia" name="genre" onChange={this.handleChange} checked={this.state.genre === "fantasia" ? true : false} />
+              <label htmlFor="accion">Acción</label>
+              <input type="checkbox" id="accion" value="accion" name="genre" onChange={this.handleChange} checked={this.state.genre === "accion" ? true : false} />
+            </div>
+          </div>
         </form>
+
         <div className="card">
           <p className="preview--name">Name: {this.state.name}</p>
-          <p className="preview--decription">Descripción:{this.state.description}</p>
-          <p className="preview--language">Idioma:{this.state.language}</p>
+          <p className="preview--decription">Descripción: {this.state.description}</p>
+          <p className="preview--language">Idioma: {this.state.language}</p>
+          <p className="preview--age">Edad: {this.state.age}</p>
+          <p className="preview--genre">Género: {this.state.genre}</p>
         </div>
       </div>
     );
