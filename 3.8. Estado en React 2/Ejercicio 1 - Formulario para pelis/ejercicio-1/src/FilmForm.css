@@ -1,0 +1,10 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  align-items: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
