@@ -1,6 +1,8 @@
 import React from "react";
 import "./FilmForm.css";
 
+let genreItems = [];
+
 class FilmForm extends React.Component {
   constructor(props) {
     super(props);
@@ -9,14 +11,22 @@ class FilmForm extends React.Component {
       description: "",
       language: "",
       age: "A",
-      genre: ""
+      genre: []
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.updateCheckbox = this.updateCheckbox.bind(this);
   }
 
   handleChange(event) {
     this.setState({ [event.target.name]: event.target.value });
+  }
+
+  updateCheckbox(event) {
+    genreItems[genreItems.length] = event.target.value;
+    this.setState({
+      [event.target.name]: genreItems
+    });
   }
 
   render() {
@@ -61,23 +71,38 @@ class FilmForm extends React.Component {
               {" "}
               GÉNERO:
               <label htmlFor="comedia">Comedia</label>
-              <input type="checkbox" id="comedia" value="comedia" name="genre" onChange={this.handleChange} checked={this.state.genre === "comedia" ? true : false} />
+              <input type="checkbox" id="comedia" value="comedia" name="genre" onChange={this.updateCheckbox} checked={this.state.genre === "comedia" ? true : false} />
               <label htmlFor="drama">Drama</label>
-              <input type="checkbox" id="drama" value="drama" name="genre" onChange={this.handleChange} checked={this.state.genre === "drama" ? true : false} />
+              <input type="checkbox" id="drama" value="drama" name="genre" onChange={this.updateCheckbox} checked={this.state.genre === "drama" ? true : false} />
               <label htmlFor="fantasia">Fantasía</label>
-              <input type="checkbox" id="fantasia" value="fantasia" name="genre" onChange={this.handleChange} checked={this.state.genre === "fantasia" ? true : false} />
+              <input type="checkbox" id="fantasia" value="fantasia" name="genre" onChange={this.updateCheckbox} checked={this.state.genre === "fantasia" ? true : false} />
               <label htmlFor="accion">Acción</label>
-              <input type="checkbox" id="accion" value="accion" name="genre" onChange={this.handleChange} checked={this.state.genre === "accion" ? true : false} />
+              <input type="checkbox" id="accion" value="accion" name="genre" onChange={this.updateCheckbox} checked={this.state.genre === "accion" ? true : false} />
             </div>
           </div>
         </form>
 
         <div className="card">
-          <p className="preview--name">Name: {this.state.name}</p>
-          <p className="preview--decription">Descripción: {this.state.description}</p>
-          <p className="preview--language">Idioma: {this.state.language}</p>
-          <p className="preview--age">Edad: {this.state.age}</p>
-          <p className="preview--genre">Género: {this.state.genre}</p>
+          <p className="preview--name">
+            <b>Name: </b>
+            {this.state.name}
+          </p>
+          <p className="preview--decription">
+            <b>Descripción: </b>
+            {this.state.description}
+          </p>
+          <p className="preview--language">
+            <b>Idioma: </b>
+            {this.state.language}
+          </p>
+          <p className="preview--age">
+            <b>Edad: </b>
+            {this.state.age}
+          </p>
+          <p className="preview--genre">
+            <b>Género: </b>
+            {this.state.genre.join(",")}
+          </p>
         </div>
       </div>
     );
