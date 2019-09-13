@@ -23,7 +23,9 @@ class FilmForm extends React.Component {
   }
 
   updateCheckbox(event) {
-    genreItems[genreItems.length] = event.target.value;
+    if (!genreItems.includes(event.target.value)) {
+      genreItems[genreItems.length] = event.target.value;
+    }
     this.setState({
       [event.target.name]: genreItems
     });
