@@ -1,5 +1,9 @@
 import React from "react";
 import { fetchUsers } from "./services/users";
+// 3 - INSTALAMOS EL SWITCH Y EL ROUTE
+import { Switch, Route } from "react-router-dom";
+import Home from "./components/Home";
+import User from "./components/User";
 
 class App extends React.Component {
   constructor(props) {
@@ -30,19 +34,14 @@ class App extends React.Component {
   }
 
   render() {
+    const { users } = this.state;
     return (
       <div className="App">
-        <ul className="users">
-          {this.state.users.map(item => {
-            return (
-              <li className="user" key={item.id} id={item.id}>
-                <div className="card">
-                  <h2 className="card__name">{`${item.name.first} ${item.name.last}`}</h2>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
+        {/* 4 - METO MIS COMPONENTES HOME Y USER EN SWITCH Y ROUTE Y ESTABLEZCO LAS RUTAS */}
+        <Switch>
+          <Route exact path="/" render={() => <Home users={users} />} />
+          <Route path="/yay" component={User} />
+        </Switch>
       </div>
     );
   }
