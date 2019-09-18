@@ -13,7 +13,6 @@ class App extends React.Component {
     };
 
     this.getUsers = this.getUsers.bind(this);
-    // this.updateCheckbox = this.updateCheckbox.bind(this);
   }
 
   componentDidMount() {
