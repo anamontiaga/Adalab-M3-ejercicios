@@ -16,6 +16,8 @@ class SeriesItem extends React.Component {
     this.props.handleBtnClick(seriesData);
   }
 
+  // Sube las propiedades que quiere pintar con props.
+
   render() {
     console.log("Rendering SeriesItem", this.props);
     return (

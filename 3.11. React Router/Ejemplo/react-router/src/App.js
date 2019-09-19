@@ -39,7 +39,9 @@ class App extends React.Component {
         {/* 4 - METO MIS COMPONENTES HOME Y USER EN SWITCH Y ROUTE Y ESTABLEZCO LAS RUTAS */}
         <Switch>
           <Route exact path="/" render={() => <Home users={users} />} />
-          <Route path="/yay" component={User} />
+          <Route path="/user/:userId" render={routerProps => <User match={routerProps.match} users={users} />} />
+          {/* 5 - LE PASO UN PATRÓN */}
+          {/* component={User}  */}
         </Switch>
       </div>
     );
