@@ -13,6 +13,7 @@ class App extends React.Component {
     };
 
     this.getUsers = this.getUsers.bind(this);
+    // this.filterUsers = this.filterUsers.bind(this);
   }
 
   componentDidMount() {
@@ -32,13 +33,21 @@ class App extends React.Component {
     });
   }
 
+  // filterUsers(selectValue) {
+  //   const { users } = this.state;
+  //   const selectValueUsers = users.filter(user => user.gender === selectValue);
+  //   console.log(selectValueUsers);
+  //   console.log(selectValue);
+  //   this.setState({ users: selectValueUsers });
+  // }
+
   render() {
     const { users } = this.state;
     return (
       <div className="App">
         {/* 4 - METO MIS COMPONENTES HOME Y USER EN SWITCH Y ROUTE Y ESTABLEZCO LAS RUTAS */}
         <Switch>
-          <Route exact path="/" render={() => <Home users={users} />} />
+          <Route exact path="/" render={() => <Home actionToPerform={this.filterUsers} users={users} />} />
           {/* Renderizamos para poder pasar props al componente */}
           <Route path="/user/:userId" render={routerProps => <User match={routerProps.match} users={users} />} />
           {/* 5 - LE PASO UN PATRÓN */}
