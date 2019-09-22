@@ -43,7 +43,12 @@ class App extends React.Component {
               return <Home getUserQuery={this.getUserQuery} query={query} pokemones={pokemones} />;
             }}
           />
-          <Route path="/poke-detail" component={PokeDetail} />
+          <Route
+            path="/poke-detail/:pokeId"
+            render={routerProps => {
+              return <PokeDetail routerProps={routerProps} pokemones={pokemones} />;
+            }}
+          />
         </Switch>
       </div>
     );

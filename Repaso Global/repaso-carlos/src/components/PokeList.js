@@ -12,7 +12,7 @@ const PokeList = props => {
         .map(pokemon => {
           return (
             <li className="pokemon" key={`key${pokemon.id}`}>
-              <Link to="/poke-detail" className="pokemon__link">
+              <Link to={`/poke-detail/${pokemon.id}`} className="pokemon__link">
                 <PokeCard name={pokemon.name} url={pokemon.url} />
               </Link>
             </li>
