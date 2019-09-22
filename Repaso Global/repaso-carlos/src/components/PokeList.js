@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import PokeCard from "./PokeCard";
+import { Link } from "react-router-dom";
 
 const PokeList = props => {
   const { pokemones, query } = props;
@@ -11,7 +12,9 @@ const PokeList = props => {
         .map(pokemon => {
           return (
             <li className="pokemon" key={`key${pokemon.id}`}>
-              <PokeCard name={pokemon.name} url={pokemon.url} />
+              <Link to="/poke-detail" className="pokemon__link">
+                <PokeCard name={pokemon.name} url={pokemon.url} />
+              </Link>
             </li>
           );
         })}

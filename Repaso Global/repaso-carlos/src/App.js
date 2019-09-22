@@ -1,8 +1,9 @@
 import React from "react";
 import "./App.css";
 import { fetchPokemones } from "./services/fetchPokemones";
-import PokeList from "./components/PokeList";
-import Filter from "./components/Filter";
+import Home from "./components/Home";
+import PokeDetail from "./components/PokeDetail";
+import { Switch, Route } from "react-router-dom";
 
 class App extends React.Component {
   constructor(props) {
@@ -34,8 +35,16 @@ class App extends React.Component {
     return (
       <div className="app">
         <h1 className="app__title">Mi lista de Pokemones</h1>
-        <Filter getUserQuery={this.getUserQuery} value={query} />
-        <PokeList pokemones={pokemones} query={query} />
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => {
+              return <Home getUserQuery={this.getUserQuery} query={query} pokemones={pokemones} />;
+            }}
+          />
+          <Route path="/poke-detail" component={PokeDetail} />
+        </Switch>
       </div>
     );
   }
